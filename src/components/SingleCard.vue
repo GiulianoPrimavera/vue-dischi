@@ -10,7 +10,7 @@
 
         <div class="single_card_description">
             <p>{{ artist }}</p>
-            <p>{{ year }}</p>
+            <p class="small">{{ year }}</p>
         </div>
     </div>
 </template>
