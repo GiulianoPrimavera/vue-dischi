@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <Main></Main>
   </div>
 </template>
@@ -18,6 +17,9 @@ export default {
 
 <style lang="scss">
 @import 'styles/app';
+@import 'styles/navbar';
+@import 'styles/main';
+
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -25,6 +27,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
