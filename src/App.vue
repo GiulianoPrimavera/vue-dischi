@@ -22,6 +22,7 @@ export default {
 @import 'styles/app';
 @import 'styles/navbar';
 @import 'styles/main';
+@import 'styles/singleCard';
 
 
 #app {
