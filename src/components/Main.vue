@@ -2,9 +2,9 @@
   <div class="main">
     <div class="cards_container">
       <SingleCard v-for="(card, i) in cardsList" :key="i"
-      :image="card.image"
+      :image="card.poster"
       :title="card.title"
-      :artist="card.artist"
+      :artist="card.author"
       :year="card.year"
       ></SingleCard>
     </div>
@@ -27,7 +27,7 @@ export default {
   mounted() {
       axios.get("https://flynn.boolean.careers/exercises/api/array/music").then((resp) =>{
         console.log(resp.data.response);
-          
+          this.cardsList.push(...resp.data.response)
       })
   },
 };
