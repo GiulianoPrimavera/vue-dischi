@@ -1,8 +1,10 @@
 .main{
-    height: 100vh; 
     background-color: #192d3b;
-    padding: 100px 200px;
-    display: flex;
-    flex-wrap: wrap;
-
+    padding: 80px 300px;
+    
+    .cards_container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+    } 
 }
