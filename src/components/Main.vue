@@ -3,7 +3,7 @@
     <div class="cards_container">
       <SingleCard v-for="(card, i) in cardsList" :key="i"
       :image="card.poster"
-      :title="card.title"
+      :title="card.title.toUpperCase()"
       :artist="card.author"
       :year="card.year"
       ></SingleCard>
