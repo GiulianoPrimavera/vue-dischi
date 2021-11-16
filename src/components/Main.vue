@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="cards_container">
-      <SingleCard 
+      <SingleCard
         v-for="(card, i) in cardListFiltered"
         :key="i"
         :image="card.poster"
@@ -27,7 +27,12 @@ export default {
       genreList: [],
     };
   },
-  props: ['genre'],
+  props: {
+    genre: {
+      type: String,
+      default: "all",
+    },
+  },
   computed: {
     cardListFiltered() {
       return this.cardsList.filter((el) => {
