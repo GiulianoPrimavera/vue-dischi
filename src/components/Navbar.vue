@@ -5,11 +5,24 @@
     </div>
 
     <div class="navbar_filter_container">
-       <select name="album_genre"></select>
+      <select name="album_genre" v-model="selectGenre" @change="$emit('changedGenre', selectGenre)">
+        <option value="all">all</option>
+        <option v-for="(genere, i) in genres" :key="i" :value="genere">
+          {{ genere }}
+        </option>
+      </select>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Navbar",
+  data() {
+    return {
+      selectGenre: "all",
+    };
+  },
+  props: { genres: Array },
+};
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Navbar></Navbar>
-    <Main></Main>
+    <Navbar :genres="genreList" @changedGenre="setGenre"></Navbar>
+    <Main @genresReady="getGenres" :genre="selectedGenre"></Main>
   </div>
 </template>
 
@@ -14,6 +14,20 @@ export default {
   components: {
     Navbar,
     Main
+  },
+  data(){
+    return {
+      genreList: [],
+      selectedGenre: ""
+    }
+  },
+  methods: {
+    getGenres(lista){
+      this.genreList = lista
+    },
+    setGenre(genere){
+      this.selectedGenre = genere
+    }
   }
 }
 </script>
