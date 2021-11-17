@@ -18,7 +18,7 @@ export default {
   data(){
     return {
       genreList: [],
-      selectedGenre: ""
+      selectedGenre: "all"
     }
   },
   methods: {
